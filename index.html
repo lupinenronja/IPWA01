@@ -64,7 +64,8 @@
         <h2>Unsere Organisation</h2>
             <p>Unsere Organisation "Vorletzte Generation" beschäftigt sich mit den Auswirkungen des Klimawandels.
             Dafür ermitteln wir aus einer seriösen Quelle verlässliche Daten, welche namhaften FIrmen wie viel 
-            CO2 emittieren. Dabei streben wir keinen Profit an.</p>
+            CO2 emittieren. Dabei streben wir keinen Profit an, sondern handeln ausschließlich nach unserem
+            moralischen Werten.</p>
     </section>
 
     <section id="mission">
@@ -79,7 +80,43 @@
 
     <section id="data">
         <h2>Unsere Daten</h2>
-        <p>
+            <p>
+            <form name="dropdownFilter" id="dropdownFilter">
+                Nation: <select name="nation" id="nation">
+                    <option value="blanko" selected:"" >Bitte auswählen</option>
+                    <option value="china" >China</option>
+                    <option value="deutschland" >Deutschland</option>
+                    <option value="italien" >Italien</option>
+                    <option value="japan" >Japan</option>
+                    <option value="luxemburg" >Luxemburg</option>
+                    <option value="usa" >USA</option>
+                  </select>
+                  <br><br>
+                Unernehmen: <select name="unternehmen" id="unternehmen">
+                    <option value="blanko" selected:"" >Bitte auswählen</option>
+                    <option value="airDuown" >AirDown</option>
+                    <option value="deinMogeriemarkt" >deinMogeriemarkt</option>
+                    <option value="katVonSMakeUp" >Kat von S MakeUp</option>
+                    <option value="lessNutrition" >LessNutrition</option>
+                    <option value="neapelRecords" >NeapelRecords</option>
+                    <option value="phantasielosland" >Phantasielosland</option>
+                    <option value="rammholz" >Rammholz</option>
+                    <option value="rossfrau" >Rossfrau</option>
+                    <option value="tinnendo" >Tinnendo</option>
+                    <option value="temmmmmmu" >Temmmmmmu</option>
+                  </select>
+                  <br><br>
+                Sortieren nach: <select name="sortierenNach" id="sortierenNach">
+                    <option value="blanko" selected:"" >Bitte auswählen</option>
+                    <option value="alphabetischNation" >alphabetisch (Nation)</option>
+                    <option value="alphabetischUnternehmen" >alphabetisch (Unternehmen)</option>
+                    <option value="emissionenAufsteigend" >Emissionen aufsteigend</option>
+                    <option value="emissionenAbsteigend" >Emissionen absteigend</option>
+                  </select>
+                  <br><br>
+                  <button type="submit">Anwenden</button> 
+                </form>
+            <br> 
             <table>
                 <thead>
                     <tr>
@@ -92,12 +129,12 @@
                     <tr>
                         <td>Rossfrau</td>
                         <td>Deutschland</td>
-                        <td>5.7</td>
+                        <td>1.7</td>
                     </tr>
                     <tr>
                         <td>AirDown</td>
                         <td>USA</td>
-                        <td>4.4</td>
+                        <td>2.4</td>
                     </tr>
                     <tr>
                         <td>Kat von S MakeUp</td>
@@ -136,7 +173,7 @@
                     </tr>
                     <tr>
                         <td>dein mogeriemarkt</td>
-                        <td>Luxenburg</td>
+                        <td>Luxemburg</td>
                         <td>4.5</td>
                     </tr>
                 </tbody>
