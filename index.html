@@ -4,6 +4,8 @@
  <title>Vorletzte Generation</title>
  </head>
 
+
+ 
  <body>
     <header>
         <nav>
@@ -82,8 +84,22 @@
         <h2>Unsere Daten</h2>
             <p>
             <form name="dropdownFilter" id="dropdownFilter">
+                Unternehmen: <select name="unternehmen" id="unternehmen">
+                    <option value="blanko" selected: >Bitte auswählen</option>
+                    <option value="airDown" >AirDown</option>
+                    <option value="deinMogeriemarkt" >deinMogeriemarkt</option>
+                    <option value="katVonSMakeUp" >Kat von S MakeUp</option>
+                    <option value="lessNutrition" >LessNutrition</option>
+                    <option value="neapel records" >Neapel Records</option>
+                    <option value="phantasielosland" >Phantasielosland</option>
+                    <option value="rammholz" >Rammholz</option>
+                    <option value="rossfrau" >Rossfrau</option>
+                    <option value="tinnendo" >Tinnendo</option>
+                    <option value="temmmmmmu" >Temmmmmmu</option>
+                  </select>
+                  <br><br>
                 Nation: <select name="nation" id="nation">
-                    <option value="blanko" selected:"" >Bitte auswählen</option>
+                    <option value="blanko" selected: >Bitte auswählen</option>
                     <option value="china" >China</option>
                     <option value="deutschland" >Deutschland</option>
                     <option value="italien" >Italien</option>
@@ -92,35 +108,22 @@
                     <option value="usa" >USA</option>
                   </select>
                   <br><br>
-                Unernehmen: <select name="unternehmen" id="unternehmen">
-                    <option value="blanko" selected:"" >Bitte auswählen</option>
-                    <option value="airDuown" >AirDown</option>
-                    <option value="deinMogeriemarkt" >deinMogeriemarkt</option>
-                    <option value="katVonSMakeUp" >Kat von S MakeUp</option>
-                    <option value="lessNutrition" >LessNutrition</option>
-                    <option value="neapelRecords" >NeapelRecords</option>
-                    <option value="phantasielosland" >Phantasielosland</option>
-                    <option value="rammholz" >Rammholz</option>
-                    <option value="rossfrau" >Rossfrau</option>
-                    <option value="tinnendo" >Tinnendo</option>
-                    <option value="temmmmmmu" >Temmmmmmu</option>
-                  </select>
-                  <br><br>
+
                 Sortieren nach: <select name="sortierenNach" id="sortierenNach">
-                    <option value="blanko" selected:"" >Bitte auswählen</option>
+                    <option value="blanko" selected: >Bitte auswählen</option>
                     <option value="alphabetischNation" >alphabetisch (Nation)</option>
                     <option value="alphabetischUnternehmen" >alphabetisch (Unternehmen)</option>
                     <option value="emissionenAufsteigend" >Emissionen aufsteigend</option>
                     <option value="emissionenAbsteigend" >Emissionen absteigend</option>
                   </select>
                   <br><br>
-                  <button type="submit">Anwenden</button> 
+                  <button id="anwenden" type="button">Anwenden</button> 
                 </form>
             <br> 
-            <table>
+            <table id="tabelle">
                 <thead>
                     <tr>
-                        <th>Firma</th>
+                        <th>Unternehmen</th>
                         <th>Nation</th>
                         <th>jährliche Emissionen in Mio. Tonnen CO2</th>
                     </tr>
@@ -191,6 +194,7 @@
     </footer>
 
 </main>
+    <script src="script.js"></script>
  </body>
 
 </html>
