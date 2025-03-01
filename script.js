@@ -12,21 +12,21 @@ function tabelleFiltern () {
         let spalten = zeilen[i].getElementsByTagName("td"); //Array mit Spaltenelementen
 
         let unternehmen = spalten[0].innerText.trim().toLowerCase();  
-            // Erste Spalte (Unternehmen) durchsuchen, dabei Leerzeichen und Großschreibung 
-            // ignorieren
+            //Erste Spalte (Unternehmen) durchsuchen, dabei Leerzeichen und Großschreibung 
+            //ignorieren
         let nation = spalten[1].innerText.trim().toLowerCase();  
-            // Zweite Spalte (Nation) durchsuchen, dabei Leerzeichen und Großschreibung 
-            // ignorieren
+            //Zweite Spalte (Nation) durchsuchen, dabei Leerzeichen und Großschreibung 
+            //ignorieren
 
         if ((nutzereingabeNation === "blanko" || nutzereingabeNation === nation) &&
         (nutzeringabeUnternehmen === "blanko" || nutzeringabeUnternehmen === unternehmen)) {
-        zeilen[i].style.display = ""; // Zeile anzeigen, wenn nichts gesucht oder etwas 
-        // gefunden wurde
+        //Zeile anzeigen, wenn nichts gesucht oder etwas gefunden wurde
+        zeilen[i].style.display = ""; 
         }
            
         else {
-        zeilen[i].style.display = "none"; // Zeile ausblenden, wenn sie Suchbegriff(e) 
-        // nicht enthält
+        //Zeile ausblenden, wenn sie Suchbegriff(e) nicht enthält
+        zeilen[i].style.display = "none"; 
         }
     }
 }
@@ -40,6 +40,7 @@ function tabelleSortieren() {
     let inhalt = tabelle.querySelector("tbody"); //Tabelle ohne thead, zu ändern
     const tabelleArray = [...inhalt.querySelectorAll("tr")]; //Zeilenelemente als Array
   
+    //Sortieren nach: alphabetisch (Unternehmen)
     if (sortierKriterium === "alphabetischUnternehmen") {
         //alphabetisch sortieren
         tabelleArray.sort((a, b) => {
@@ -48,17 +49,54 @@ function tabelleSortieren() {
             let bUnternehmen = b.cells[0].innerText.trim().toLowerCase();
             //alphabetisch sortieren, Umlaute erlauben
             return aUnternehmen.localeCompare(bUnternehmen); 
-            console.log(tabelleArray.map(zeile => zeile.cells[0].innerText));  //Testen
         });    
         //tbody manipulieren
         inhalt.innerText = ""; //leeren
         tabelleArray.forEach(zeile => inhalt.appendChild(zeile)); //Sortiertes einfügen
-
-        return tabelleArray;
     }
 
+    //Sortieren nach: alphabetisch (Nationen)
+    if (sortierKriterium === "alphabetischNation") {
+        //alphabetisch sortieren
+        tabelleArray.sort((a, b) => {
+            //Nation aus zweiter Spalte lesen, Leerzeichen und Großschreibung ignorieren
+            let aNation = a.cells[1].innerText.trim().toLowerCase();
+            let bNation = b.cells[1].innerText.trim().toLowerCase();
+            //alphabetisch sortieren, Umlaute erlauben
+            return aNation.localeCompare(bNation); 
+        });    
+        //tbody manipulieren
+        inhalt.innerText = ""; //leeren
+        tabelleArray.forEach(zeile => inhalt.appendChild(zeile)); //Sortiertes einfügen
+    }
 
+    //Sortieren nach: Emissionen aufsteigend
+    if (sortierKriterium === "emissionenAufsteigend") {
+        //numerisch sortieren
+            tabelleArray.sort((a,b) => {
+            //Werte aus 3. Spalte lesen, in Kommazahlen konvertieren
+            let aEmission = parseFloat(a.cells[2].innerText);
+            let bEmission = parseFloat(b.cells[2].innerText);
+            return aEmission - bEmission; // aufsteigend sortieren    
+        })
+        //tbody manipulieren
+        inhalt.innerText = ""; //leeren
+        tabelleArray.forEach(zeile => inhalt.appendChild(zeile)); //Sortiertes einfügen
+    }
 
+        //Sortieren nach: Emissionen absteigend
+        if (sortierKriterium === "emissionenAbsteigend") {
+            //numerisch sortieren
+                tabelleArray.sort((a,b) => {
+                //Werte aus 3. Spalte lesen, in Kommazahlen konvertieren
+                let aEmission = parseFloat(a.cells[2].innerText);
+                let bEmission = parseFloat(b.cells[2].innerText);
+                return bEmission - aEmission; // absteigend sortieren    
+            }) 
+            //tbody manipulieren
+            inhalt.innerText = ""; //leeren
+            tabelleArray.forEach(zeile => inhalt.appendChild(zeile)); //Sortiertes einfügen
+        }
 }
 
 //Tabelle mit oder ohne Nutzereingaben aktualisieren
