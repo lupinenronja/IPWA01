@@ -1,0 +1,29 @@
+
+
+img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+
+.navbar {
+    background-image: url(assets/images/logo_vorletzte-generation_1600x500.png) !important;
+    background-size: cover !important; 
+    background-position: center !important;
+    background-repeat: no-repeat !important;  
+    min-height: 350px !important;
+    max-height: 100% !important;
+    width: 100% !important;
+    align-items: flex-end;
+}
+
+.navbar a {
+    color: blue !important;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: flex-end; 
+    gap: 30px;
+}
+
+
