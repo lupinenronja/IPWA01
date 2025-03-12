@@ -5,15 +5,21 @@ img {
     max-height: 100% !important;
 }
 
+#logo {
+    max-width: 40% !important;
+    max-height:40% !important;
+}
+
+#name {
+    color: black;
+}
+
 .navbar {
-    background-image: url(assets/images/logo_vorletzte-generation_1600x500.png) !important;
-    background-size: cover !important; 
-    background-position: center !important;
-    background-repeat: no-repeat !important;  
-    min-height: 350px !important;
-    max-height: 100% !important;
-    width: 100% !important;
+    max-height: 100%;
+    width: 100% ;
     align-items: flex-end;
+
+    background-color: rgb(60, 158, 60);
 }
 
 .navbar a {
@@ -26,4 +32,15 @@ img {
     gap: 30px;
 }
 
+.row {
+    min-height: 10vh;
+    display: flex;
+    align-items: stretch ;
+}
 
+
+#textHeader {
+    color: black !important;
+    font-size: x-large;
+    font-style:unset;
+}
