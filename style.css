@@ -1,4 +1,6 @@
-
+#brand {
+    color: black !important;
+  }
 
 img {
     max-width: 100% !important;
@@ -10,16 +12,12 @@ img {
     max-height:40% !important;
 }
 
-#name {
-    color: black;
-}
-
 .navbar {
-    max-height: 100%;
+     max-height: 100%;
     width: 100% ;
     align-items: flex-end;
-
     background-color: rgb(60, 158, 60);
+    color: black;
 }
 
 .navbar a {
@@ -38,9 +36,15 @@ img {
     align-items: stretch ;
 }
 
+#search {
+    color: black !important;
+    border: 2px solid black !important;
+}
 
 #textHeader {
     color: black !important;
     font-size: x-large;
     font-style:unset;
 }
+
+
