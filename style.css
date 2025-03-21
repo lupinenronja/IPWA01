@@ -12,12 +12,30 @@ img {
     max-height:40% !important;
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        font-size: 12px; 
+    }
+}
+
+@media (max-width: 350px) {
+    .navbar {
+        font-size: 11px; 
+        
+    }
+    #text-header {
+        font-size: 100%;
+    }
+}
+
+
 .navbar {
      max-height: 100%;
-    width: 100% ;
+    width: 100% !important;
     align-items: flex-end;
     background-color: rgb(60, 158, 60);
     color: black;
+    overflow: hidden;    
 }
 
 .navbar a {

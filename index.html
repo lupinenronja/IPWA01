@@ -13,16 +13,16 @@
     <header>
         <nav class="navbar">
             <div class="container-fluid">
-                <div class="col-lg-4 col md-5 col-sm-12 d-flex flex-column justify-content-center">
+                <div class="col-lg-4 col md-6 col-sm-12 d-flex flex-column justify-content-center">
                     <span class="fs-5 fw-bold">Wir sind die</span> 
                     <span class="fs-2 fw-bold">Vorletzte Generation</span> 
                 </div>
                 
-                <div class="col-lg-4 col md-2 col-sm-12 d-flex justify-content-center">
+                <div class="col-lg-4 col md-6 col-sm-12 d-flex justify-content-center">
                     <img src="assets/images/logo_vorletzte-generation.webp" class="img-fluid" alt="Logo" id="logo">
                 </div>
                 
-                <div class="col-lg-4 col md-5 col-sm-12 d-flex flex-column align-items-end">
+                <div class="col-lg-4 col-md-12 col-sm-12 d-flex align-items-end">
                     <span id="textHeader">Finde uns auf</span>
                     <ul class="navbar-nav d-flex flex-row">
                         <li class="nav-item"><a href="https://facebook.com">Facebook</a></li>             
@@ -32,8 +32,7 @@
                         <li class="nav-item"><a href="https://knuddels.de">Knudddels</a></li>
                     </ul>
                 </div>
-                </div>
-            </div>              
+            </div>           
         </nav>
     </header>
 
@@ -66,22 +65,8 @@
           </div>
         </div>
     </nav>
-      
-
-
-    
 
     <main>
-
-        <div class="row">
-            <div class="col-lg-4 col-sm-12"></div>
-                //...
-            
-            <div class="col-lg-8 col-sm-12"></div>
-                //...
-        </div>
-
-
     <section id="co2emissions">
         <h2>CO2 Emissionen</h2>
         <p>Im Jahr 2016 setzte die Menschheit circa 35 Milliarden Tonnen (35 Gigatonnen, Gt, bzw. 35 Pg) 
@@ -104,8 +89,8 @@
             Jahr weiter ansteigt. Gegenüber dem vorindustriellen Niveau von 280 ppm führten die bisher durch 
             den Menschen erzeugten CO2-Emissionen bereits zu einer Erhöhung der atmosphärischen Konzentration 
             von über 40 %.
-        <p>Quelle: <a href="https://de.wikipedia.org/wiki/Liste_der_gr%C3%B6%C3%9Ften_Kohlenstoffdioxidemittenten">Wikipedia</a></p>
-        </p>
+        <br>Quelle: <a href="https://de.wikipedia.org/wiki/Liste_der_gr%C3%B6%C3%9Ften_Kohlenstoffdioxidemittenten">Wikipedia</a></p>
+        
     </section>
      
     <section id="organisation">
@@ -166,7 +151,9 @@
                   <button id="anwenden" type="button">Anwenden</button> 
                 </form>
             <br> 
-            <table id="tabelle">
+
+        <div class="table-responsive-sm">
+            <table class="table table-striped table-dark table-bordered" id ="tabelle">
                 <thead>
                     <tr>
                         <th>Unternehmen</th>
@@ -227,8 +214,10 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
         </p>
     </section>
+    </main>
 
     <footer>
         <ul class="nav justify-content-center">
@@ -241,9 +230,8 @@
           </ul>
     </footer>
 
-</main>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
- </body>
-
+ 
+</body>
 </html>
